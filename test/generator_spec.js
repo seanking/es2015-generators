@@ -33,9 +33,9 @@ describe('ES2015 Generators ', () => {
     const iter = newIterator();
 
     // Then
+    assert.deepEqual(iter.next(), { value: 0, done: false });
     assert.deepEqual(iter.next(), { value: 1, done: false });
     assert.deepEqual(iter.next(), { value: 2, done: false });
-    assert.deepEqual(iter.next(), { value: 3, done: false });
     assert.deepEqual(iter.next(), { value: undefined, done: true });
   });
 });
