@@ -61,6 +61,6 @@ describe('ES2015 Generators ', () => {
     assert.deepEqual(iter.next(true), { value: 0, done: false });
     assert.deepEqual(iter.next(), { value: 1, done: false });
     assert.deepEqual(iter.next(), { value: 2, done: false });
-    // assert.deepEqual(iter.next(), { value: undefined, done: true });
+    assert.deepEqual(iter.next(), { value: undefined, done: true });
   });
 });
