@@ -38,4 +38,29 @@ describe('ES2015 Generators ', () => {
     assert.deepEqual(iter.next(), { value: 2, done: false });
     assert.deepEqual(iter.next(), { value: undefined, done: true });
   });
+
+
+  it('should modify the internal state', () => {
+    // Given
+    function* newIterator() {
+      for (let i = 0; i < 3; i++) {
+        const reset = yield i; // sets reset to the value passed into next
+
+        if (reset) {
+          i = -1; // reset for loop
+        }
+      }
+    }
+
+    // When
+    const iter = newIterator();
+
+    // Then
+    assert.deepEqual(iter.next(), { value: 0, done: false });
+    assert.deepEqual(iter.next(), { value: 1, done: false });
+    assert.deepEqual(iter.next(true), { value: 0, done: false });
+    assert.deepEqual(iter.next(), { value: 1, done: false });
+    assert.deepEqual(iter.next(), { value: 2, done: false });
+    // assert.deepEqual(iter.next(), { value: undefined, done: true });
+  });
 });
