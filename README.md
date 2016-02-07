@@ -24,13 +24,13 @@ console.log(iter.next()); // prints { value: undefined, done: true }
 Generators have the ability to maintain state. In the following example, the generator the state if _i_ and increments it before each request.
 
 ```javascript
-function* newGenerator() {
+function* newIterator() {
   for (let i = 0; i < 2; i++) {
     yield i;
   }
 }
 
-const iter = newGenerator();
+const iter = newIterator();
 
 console.log(iter.next()); // prints { value: 1, done: false }
 console.log(iter.next()); // prints { value: 2, done: false }
