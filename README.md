@@ -1,8 +1,8 @@
 # Generators in ES2015
 
-Generators are a new feature provided by the [ES2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/#). A generator is a method that can be exited and re-entered multiple times without loosing state. The examples below will step through creating basic and complex generators.
+Generators are a new feature provided by the [ES2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/#). A generator is a method that can be exited and re-entered multiple times without losing state. The examples below will step through creating basic and complex generators.
 
-### Basic Generator
+## Basic Generator
 
 A generator must be declared using _function*_ and contain at least one _yield_ statement.
 
@@ -39,6 +39,7 @@ console.log(iter.next()); // prints { value: 1, done: false }
 console.log(iter.next()); // prints { value: 2, done: false }
 console.log(iter.next()); // prints { value: undefined, done: true }
 ```
+## Complex Generators
 
 ### Internal State
 
@@ -87,6 +88,6 @@ console.log(iter.next());     // prints { value: undefined, done: true }
 
 ## Future
 
-Generators appear to be a fundamental part of the language moving forward. The [Async-Await](http://tc39.github.io/ecmascript-asyncawait/) proposal for ES7 uses generators to improve the languages support for writing asynchronous.
+Generators appear to be a fundamental part of the language moving forward. The [Async-Await](http://tc39.github.io/ecmascript-asyncawait/) proposal for ES7 uses generators to improve the language's support for writing asynchronous.
 
-As of this post, generators are supported in [nodejs](https://nodejs.org/en/) and in some major browsers. Unlike with most ES6 features, [babel](https://babeljs.io)'s [polyfill](https://babeljs.io/docs/usage/polyfill) must be used instead of the trans-compiler. As with most polyfills, tread carefully when adding any dependency to your code.
+As of this post, generators are supported in [nodejs](https://nodejs.org/en/) and in some major browsers. Unlike most ES6 features, [babel](https://babeljs.io)'s [polyfill](https://babeljs.io/docs/usage/polyfill) must be used instead of the trans-compiler. As with most polyfills, tread carefully when adding any dependency to your code.
