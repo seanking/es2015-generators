@@ -3,7 +3,7 @@
 const assert = require('chai').assert;
 
 describe('ES2015 Generators ', () => {
-  it('should iterator of results', () => {
+  it('should iterator the generator', () => {
     // Given
     function* newIterator() {
       yield 1;
@@ -21,7 +21,7 @@ describe('ES2015 Generators ', () => {
     assert.deepEqual(iter.next(), { value: undefined, done: true });
   });
 
-  it('should maintain internal state', () => {
+  it('should maintain the internal state', () => {
     // Given
     function* newIterator() {
       for (let i = 0; i < 3; i++) {
