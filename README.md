@@ -45,7 +45,7 @@ console.log(iter.next()); // prints { value: undefined, done: true }
 
 Generators have the ability to maintain state within the function. This allows for complex algorithms that can produce results on demand.
 
-In the following example, the generator function uses a _for_ loop to increment tthe state of _i_.
+In the following example, the generator function uses a _for_ loop to increment the state of _i_.
 
 ```javascript
 function* newIterator() {
