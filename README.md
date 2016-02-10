@@ -23,7 +23,7 @@ function* newIterator() {
 const iter = newIterator();
 ```
 
-The Generator object supports the [iterable and iterator protocols](http://www.rseanking.com/news/2016/2/1/iterators-generators-and-async-programming-part-1). Calling the object's _next_ method will execute the function until the first _yield_ statement. The expression following the _yield_ will be returned. The following iterations will continue from the previous _yield_ statement and execute until the next _yield_ statement.
+The Generator object supports the [iterable and iterator protocols](https://github.com/seanking/es2015-iterators). Calling the object's _next_ method will execute the function until the first _yield_ statement. The expression following the _yield_ will be returned. The following iterations will continue from the previous _yield_ statement and execute until the next _yield_ statement.
 
 In the following example, iterating over the generator will produce 1 and then 2.
 
